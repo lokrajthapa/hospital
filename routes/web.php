@@ -12,6 +12,9 @@ use App\Http\Controllers\BranchController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PatientController;
+use App\Http\Controllers\ReportController;
+
 
 
 
@@ -179,7 +182,32 @@ Route::get('/delete-parentpage/{id}',[ParentPageController::class,'deleteParentp
  Route::get('/delete-blog/{id}',[BlogController::class,'DeleteBlog']);
 
  //upload
-//  Route::post('ckeditor/image_upload',[PostController::class,'upload'])->name('upload');
+ Route::post('ckeditor/image_upload',[PostController::class,'upload'])->name('upload');
+
+//for Patients
+Route::get('/add-patient',[PatientController::class,'Addpatient'])->name('patient');
+Route::Post('/add-patient',[PatientController::class,'PatientStore'])->name('patient.store');
+Route::get('/all-patient',[PatientController::class,'patients'])->name('patient.search');
+Route::get('/edit-patient/{id}',[PatientController::class,'EditPatient']);
+Route::post('/update-patient',[PatientController::class,'UpdatePatient'])->name('patient.update');
+Route::get('/delete-patient/{id}',[PatientController::class,'DeletePatient']);
+
+//for Patients report
+Route::get('/add-report/{id}',[ReportController::class,'Addreport'])->name('report');
+Route::Post('/add-report',[ReportController::class,'ReportStore'])->name('report.store');
+Route::get('/all-report',[ReportController::class,'reports']);
+Route::get('/edit-report/{id}',[ReportController::class,'EditReport']);
+Route::post('/update-report',[ReportController::class,'UpdateReport'])->name('report.update');
+Route::get('/delete-report/{id}',[ReportController::class,'DeleteReport']);
+
+
+
+
+
+
+
+
+
 
 
 

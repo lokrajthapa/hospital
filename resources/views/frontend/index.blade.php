@@ -394,14 +394,14 @@ $selectTeams = $sc->SelectTeam();
                         <div class="row align-items-center">
                             <div class="col-sm-6 position-relative">
                                 <a href="#blog">
-                                    <img class="img-fluid d-block" src="{{url('uploads/Postimg/').'/'.$newsEvent[0]->image }}" alt="image">
+                                    <img class="img-fluid d-block" src="{{url('uploads/Postimg/').'/'.@$newsEvent[0]->image }}" alt="image">
                                 </a>
                             </div>
                             <div class="col-sm-6">
                                 <div class="card-body blog-details align-self pl-sm-0">
-                                    <a href="news/{{$newsEvent[0]->id}}" class="blog-desc"> {!! substr($newsEvent[0]->title , 0, 50) !!}
+                                    <a href="news/{{@$newsEvent[0]->id}}" class="blog-desc"> {!! substr(@$newsEvent[0]->title , 0, 50) !!}
                                     </a>
-                                    <p>{!! substr($newsEvent[0]->description , 0, 200) !!}</p>
+                                    <p>{!! substr(@$newsEvent[0]->description , 0, 200) !!}</p>
                                     <div class="d-flex align-items-center justify-content-between mt-lg-4 mt-5">
                                         <!-- <h5 class="text-blog-e">July 15, 2021</h5> -->
                                         <!-- <a href="#blog" class="blog-icon-e"><i class="fas fa-plus"></i></a> -->
@@ -416,13 +416,13 @@ $selectTeams = $sc->SelectTeam();
                         <div class="row align-items-center">
                             <div class="col-sm-6 position-relative">
                                 <a href="#blog">
-                                    <img class="img-fluid d-block" src="{{url('uploads/Postimg/').'/'.$newsEvent[1]->image }}" alt="Card image cap">
+                                    <img class="img-fluid d-block" src="{{url('uploads/Postimg/').'/'.@$newsEvent[1]->image }}" alt="Card image cap">
                                 </a>
                             </div>
                             <div class="col-sm-6">
                                 <div class="card-body blog-details align-self pl-sm-0">
-                                <a href="news/{{$newsEvent[1]->id}}" class="blog-desc"> {!! substr($newsEvent[1]->title , 0, 50) !!}</a>
-                                    <p>{!! substr($newsEvent[1]->description , 0, 200) !!}</p>
+                                <a href="news/{{@$newsEvent[1]->id}}" class="blog-desc"> {!! substr(@$newsEvent[1]->title , 0, 50) !!}</a>
+                                    <p>{!! substr(@$newsEvent[1]->description , 0, 200) !!}</p>
                                     <div class="d-flex align-items-center justify-content-between mt-lg-4 mt-5">
                                         <!-- <h5 class="text-blog-e">July 18, 2021</h5> -->
                                         <!-- <a href="#blog" class="blog-icon-e"><i class="fas fa-plus"></i></a> -->

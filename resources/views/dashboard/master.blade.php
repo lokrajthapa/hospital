@@ -152,6 +152,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                        
                         </li>
                         <li>
+                            <a href="{{ route('patient')}}" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label"> Patients </span></a>
+                       
+                        </li>
+                   
+                        <li>
 							<div>
 						     <form method="post" action="{{ route('logout')}}" >
 								@csrf
@@ -190,7 +195,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 
 	
 <div class="copy fixed-bottom" >
-            <p> © 2017 EDAUS EDUCATIONAL CONSULTANCY. All Rights Reserved | Design by Tuki Soft </p>
+            <p> © 2017 Kidney Cares. All Rights Reserved | Design by Tuki Soft </p>
 	    </div>
 		</div>
 		<div class="clearfix"> </div>
