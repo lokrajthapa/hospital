@@ -39,7 +39,7 @@ class PatientController extends Controller
         return redirect()->back()->with('patient_added','Patient detail  added successfully'); 
 
     }
-    public function patients( Request $request)
+    public function patients(Request $request)
     {
         if($request->phoneNumber!="")
         {
@@ -53,11 +53,11 @@ class PatientController extends Controller
       //  $patients=Patient::all();
         return view('dashboard.patient.all-patient',compact('patients'));
     }
-    public function searchpatient($phone)
-    {
+    // public function searchpatient($phone)
+    // {
        
-        return view('dashboard.patient.all-patient',compact('patients'));
-    }
+    //     return view('dashboard.patient.all-patient',compact('patients'));
+    // }
     public function EditPatient($id)
     { 
     
@@ -86,6 +86,18 @@ class PatientController extends Controller
         $patient = Patient::find($id);
         $patient->delete();
         return redirect()->back()->with('patient_deleted','Patients   deleted  successfully'); 
+    }
+
+    public function searchreport(Request $request, $id)
+    { 
+        $patient=Patient::find($id);       
+         dd($patient);
+      
+         $data=Patient::whereHas('category',  function($q) use ($id) {
+            $q->where('user_id', $id);
+        })->get();
+
+
     }
 
 

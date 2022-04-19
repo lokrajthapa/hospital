@@ -49,6 +49,11 @@ class SelectClass extends Model
     }
 
 
+    public function selectindexBranch()
+    {
+        $branches=Branch::orderBy('id', 'DESC')->take(3)->get();
+        return  $branches;
+    }
     public function selectBranch()
     {
         $branches=Branch::all();

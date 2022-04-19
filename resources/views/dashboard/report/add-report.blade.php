@@ -47,19 +47,22 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="form-group">
-                        <div class="row ">
-                            <div class="col-sm-2 text-right">
-                                <label for="Branch name">Phone Number</label>
 
-                            </div>
-                            <div class="col-sm-10 form-group-lg ">
-                                <input type="text" name="phone_no" placeholder="" value="{{$patient->name}}" readonly>
-                            <span class="text-danger">@error('name') {{ $message }} @enderror</span>
+            <div class="form-group">
 
-                            </div>
-                        </div>
-                    </div> -->
+                <div class="row">
+                    <div class="col-sm-2 text-right">
+                        <label for="for blood_sugar"> Creatinine  </label>
+                    </div>
+
+                    <div class="col-sm-10">
+                        <input type="number" name="creatinine" placeholder="" step=0.00001 value="{{ old('creatinine') }}" >
+                        <span class="text-danger">@error('creatinine') {{ $message }} @enderror</span>
+
+                    </div>
+                 </div>
+            </div>
+            
 
 
 
@@ -71,7 +74,7 @@
                     </div>
 
                     <div class="col-sm-10">
-                        <input type="number" name="blood_sugar" placeholder="">
+                        <input type="number" name="blood_sugar" placeholder="  " step=0.000001 value="{{ old('blood_sugar') }}">
                         <span class="text-danger">@error('blood_sugar') {{ $message }} @enderror</span>
 
                     </div>
@@ -84,7 +87,7 @@
                     </div>
 
                     <div class="col-sm-10">
-                        <input type="number" name="blood_pressure" placeholder=" ">
+                        <input type="number" name="blood_pressure" placeholder="60 To 180 " step=0.000001 value="{{ old('blood_pressure') }}">
                         <span class="text-danger">@error('blood_pressure') {{ $message }} @enderror</span>
 
                     </div>
@@ -93,10 +96,10 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-sm-2 text-right">
-                        <label for="Email "> Urine Albumin </label>
+                        <label for="Email"> Urine Albumin </label>
                     </div>
                     <div class="col-sm-10">
-                        <input type="number" name="urine_albumin" placeholder=" ">
+                        <input type="number" name="urine_albumin" placeholder=" 0.22 To 1.9 mg/dl " step=0.000001 value="{{ old('urine_albumin') }}">
                         <span class="text-danger">@error('urine_albumin') {{ $message }} @enderror</span>
 
                     </div>
@@ -196,4 +199,4 @@
             }
         </script>
 
-        @endsection
+@endsection

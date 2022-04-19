@@ -22,6 +22,7 @@
                 <!-- <th scope="col">Id</th> -->
                 <th scope="col"> Date</th>
                 <th scope="col">Patient ID  </th>
+                <th scope="col">Creatinine</th>
                 <th scope="col">Blood Sugar </th>              
                 <th scope="col">Blood Pressure </th>
                 <th scope="col">Urine Albumin </th>
@@ -42,6 +43,7 @@
                 <!-- <th scope="row">{{ $report->id}}</th> -->
                 <th scope="row">{{ $report->report_date }}</th>
                 <td> {{ $report->patient_id?? null}} </td>
+                <td> {{ $report->creatinine?? null}} </td>
                 <td> {{ $report->blood_sugar ?? null}} </td>
                 <td> {{ $report->blood_pressure ?? null}} </td>
                 <td> {{ $report->urine_albumin ?? null}} </td>

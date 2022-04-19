@@ -41,6 +41,20 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-group">
+
+                        <div class="row">
+                            <div class="col-sm-2 text-right">
+                                <label for="for blood_sugar"> Creatinine  </label>
+                            </div>
+
+                            <div class="col-sm-10">
+                                <input type="number" name="creatinine" placeholder="" value="{{ $report->creatinine }}">
+                                <span class="text-danger">@error('creatinine') {{ $message }} @enderror</span>
+
+                            </div>
+                        </div>
+                    </div>
                    
 
                     <div class="form-group">   

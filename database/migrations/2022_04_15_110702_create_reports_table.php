@@ -16,7 +16,8 @@ class CreateReportsTable extends Migration
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('patient_id');
-            $table->date('report_date');
+            $table->date('report_date');         
+            $table->double('creatinine')->nullable();
             $table->double('blood_sugar')->nullable();
             $table->double('blood_pressure')->nullable();
             $table->double('urine_albumin')->nullable();

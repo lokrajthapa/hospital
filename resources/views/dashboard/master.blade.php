@@ -88,7 +88,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div id="wrapper">
 
 <!----->
-        <nav class="navbar-default navbar-static-top" role="navigation" style="position:fixed">
+        <nav class="navbar-default navbar-static-top" role="navigation" style="position:scrollable">
              <div class="navbar-header">
                
                <h1> <a class="navbar-brand" href="{{ route('dashboard')}}">ADMIN</a></h1>         
@@ -109,7 +109,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
        
      </div>
 	  <!-- slider left side -->
-		    <div class="navbar-default sidebar" role="navigation" style="position:fixed">
+		    <div class="navbar-default sidebar" role="navigation" style="position:scrollable">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                    
@@ -153,6 +153,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
                         <li>
                             <a href="{{ route('patient')}}" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label"> Patients </span></a>
+                       
+                        </li>
+                        <li>
+                            <a href="{{ route('advertisement')}}" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label"> Advertisement </span></a>
                        
                         </li>
                    

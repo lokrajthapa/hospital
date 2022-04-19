@@ -31,11 +31,12 @@ class ReportController extends Controller
             
         ]);
 
-       $report = new Report();  
+       $report = new Report();        
        $report->patient_id=$request->patient_id;
        $report->blood_sugar=$request->blood_sugar;
        $report->blood_pressure=$request->blood_pressure;
        $report->urine_albumin=$request->urine_albumin;
+       $report->creatinine=$request->creatinine;
        $report->report_date=$request->report_date;    
        if($request->hasfile('document'))
          {
@@ -90,6 +91,8 @@ class ReportController extends Controller
         $report->blood_sugar=$request->blood_sugar;
         $report->blood_pressure=$request->blood_pressure;
         $report->urine_albumin=$request->urine_albumin;
+        $report->creatinine=$request->creatinine;
+
         $report->patient_id=$request->patient_id;
         $report->report_date=$request->report_date;    
 

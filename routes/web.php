@@ -14,6 +14,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\AdvertisementController;
+
 
 
 
@@ -85,6 +87,9 @@ Route::get('/contact', function () {
 
     return view('frontend.contact');
 });
+//get parameter from the patients
+Route::get('/searchreport/{id}',[PatientController::class,'searchreport'])->name('report.search');
+
 
 // Route::get('/visaservice', function () {
 
@@ -199,6 +204,18 @@ Route::get('/all-report',[ReportController::class,'reports']);
 Route::get('/edit-report/{id}',[ReportController::class,'EditReport']);
 Route::post('/update-report',[ReportController::class,'UpdateReport'])->name('report.update');
 Route::get('/delete-report/{id}',[ReportController::class,'DeleteReport']);
+
+//advertisement part 
+Route::get('/add-advertisement',[AdvertisementController::class,'Addadvertisement'])->name('advertisement');
+Route::Post('/add-advertisement',[AdvertisementController::class,'advertisementStore'])->name('advertisement.store');
+Route::get('/all-advertisement',[AdvertisementController::class,'advertisements']);
+Route::get('/edit-advertisement/{id}',[AdvertisementController::class,'Editadvertisement'])->name('advertisement.edit');
+Route::post('/update-advertisement',[AdvertisementController::class,'Updateadvertisement'])->name('advertisement.update');
+Route::get('/delete-advertisement/{id}',[AdvertisementController::class,'Deleteadvertisement'])->name('advertisement.delete');
+
+
+
+
 
 
 

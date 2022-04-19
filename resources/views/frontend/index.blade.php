@@ -8,6 +8,9 @@ $sc = new SelectClass();
 
 $selectBranches = $sc->selectBranch();
 
+$selectindexBranches = $sc->selectindexBranch();
+
+
 
 
 $newsEvent = $sc->selectNews();
@@ -99,7 +102,7 @@ $selectTeams = $sc->SelectTeam();
         <div class="container pt-lg-5 pb-lg-5 pb-4">
             <h3 class="title-style text-center mb-5">Our <span>Center</span></h3>
             <div class="row justify-content-center">
-            @foreach ( $selectBranches as $selectBranch)
+            @foreach ($selectindexBranches as $selectBranch)
                 <div class="col-lg-4 col-md-6">
                     <div class="about-single p-3">
                         <div class="about-icon mb-4">
